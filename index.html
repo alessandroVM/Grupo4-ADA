@@ -19,16 +19,20 @@
             <img src="./src/Imagenes/logo.png" alt="Programa logo" class="nav-brand">
             <ul class="nav-menu">
                 <li class="uni">
-                    <a href="http://www.unmsm.edu.pe/">UNMSM</a>
+                    <a href="http://www.unmsm.edu.pe/" target="_blank">UNMSM</a>
                 </li>
                 <li>
-                    <a href="#">Repositorio</a>
+                    <a href="https://github.com/alessandroVM/ProyectoADA" target="_blank">Repositorio</a>
                 </li>
                 <li>
-                    <a href="https://www.facebook.com/alessandro.valenzuel99/">Redes sociales</a>
+                    <a href="https://www.instagram.com/alessandrovm27/" target="_blank">Redes sociales</a>
+                </li>
+                <li>|</li>
+                <li>
+                    <a href="https://yamile-silva.github.io/merge_sort/" target="_blank">Merge Sort</a>
                 </li>
                 <li>
-                    <a href="#">Sobre mi</a>
+                    <a href="#" target="_blank"> Radix Sort</a>
                 </li>
             </ul>
             <ul class="nav-menu-right">
@@ -40,9 +44,10 @@
             </ul>
         </nav>
         <hr>
-        <header class="banner">Programa de ordenamiento</header>
+        <header class="banner">Programa de ordenamiento - Bubble Sort</header>
         <section id="actualizar" class="data-container">
             <input type="button" value="Actualizar" onclick="location.reload()" class="boton">
+           <h2>&nbsp;<span id="tiempo">0</span> milisegundo(s)</h2>
         </section>
         <div>
             <form id="variables" class="Dato">
@@ -51,7 +56,7 @@
                         placeholder="Cantidad" class="control" >
                         <input type="number" id="ve" min="0" value="100" pattern="[0-9]+"
                         placeholder="Velocidad" class="control">
-                        <input type="submit" value="Aceptar" class="boton">
+                        <input type="submit" value="Comenzar" class="boton">
                 </div>
                 <div class="inputs">
                     <input type="number" id="li" placeholder="Limite inferior" class="control" pattern="[0-9]+">
@@ -64,20 +69,29 @@
             <section class="codigo">
                 Funcion BubbleSort(Arreglo A[],Entero n) <br>
                 Inicio <br>
-                Entero i=0, j=0 <br>
-                Para i desde 0 hasta n-1 hacer <br>
-                  &nbsp; &nbsp; Para j desde 0 hasta n-1 hacer <br>
-                  &nbsp; &nbsp; &nbsp;  Si (A[j]> A[j+1]) hacer <br>
-                  &nbsp; &nbsp; &nbsp; &nbsp; intercambiar(A[j],A[j+1]) <br>
-                  &nbsp; &nbsp; &nbsp; FinSi <br>
-                  &nbsp; &nbsp; FinPara <br>
-                  FinPara <br>
+                1. Entero i=0, j=0 <br>
+                2. Para i desde 0 hasta n-1 hacer <br>
+                3. &nbsp; &nbsp;Para j desde 0 hasta n-1 hacer <br>
+                4. &nbsp; &nbsp; &nbsp; Si (A[j]> A[j+1]) hacer <br>
+                5. &nbsp; &nbsp; &nbsp; &nbsp;intercambiar(A[j],A[j+1]) <br>
+                6. &nbsp; &nbsp; &nbsp; FinSi <br>
+                7. &nbsp; &nbsp; FinPara <br>
+                8. FinPara <br>
                   Fin 
             </section>
         </div>
+        
     </div>
 </body>
 <footer>
+    <div class="container-footer">
+        <h2><u>Desarrolladores</u></h2><br>
+        <h4>Barrios Peña Ernesto Zenobi</h4><br>
+        <h4>Salcedo Patroni Andrés Gabriel</h4><br>
+        <h4>Silva Jaramillo Yamile</h4><br>
+        <h4>Valenzuela Martinez Alessadro Gregory</h4><br>
+        <h4>Varillas Melendez Jose Luis</h4><br>
+    </div>
 </footer>
 <script src="src/main.js"></script>
 </html>

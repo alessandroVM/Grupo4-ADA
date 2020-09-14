@@ -1,5 +1,5 @@
 const container = document.querySelector(".data-container");
-
+mensaje = document.getElementById("tiempo");
 document.getElementById('variables')
     .addEventListener('submit',function(e){
   const tam =document.getElementById('ta').value;
@@ -7,7 +7,10 @@ document.getElementById('variables')
   const li = document.getElementById("li").value;
   const ls = document.getElementById("ls").value;
    generateBlocks(tam,li,ls);
+   let star = performance.now();
    bubbleSort(delay);
+   let end = performance.now();
+   mensaje.innerHTML = end - star;
   e.preventDefault();
 })
 
@@ -49,15 +52,13 @@ function swap(el1, el2) {
   });
 }
 
-async function bubbleSort(delay) {
-
+async function bubbleSort(delay){
   let blocks = document.querySelectorAll(".block");
   for (let i = 0; i < blocks.length - 1; i += 1) {
     for (let j = 0; j < blocks.length - i - 1; j += 1) {
       /*Se va cambiando de color conforme avanza */
       blocks[j].style.backgroundColor = "#AD0025";
       blocks[j + 1].style.backgroundColor = "#AD0025";
-
       await new Promise(resolve =>
         setTimeout(() => {
           resolve();
@@ -66,7 +67,7 @@ async function bubbleSort(delay) {
 
       const value1 = Number(blocks[j].childNodes[0].innerHTML);
       const value2 = Number(blocks[j + 1].childNodes[0].innerHTML);
-
+      
       if (value1 > value2) {
         await swap(blocks[j], blocks[j + 1]);
         blocks = document.querySelectorAll(".block");
